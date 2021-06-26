@@ -5,10 +5,24 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    return  SafeArea(
       child: Scaffold(
-        body: Container(),
-      ),
+          body: Container(
+            padding: EdgeInsets.fromLTRB(20, 40, 20, 0),
+            child: Row(
+              children: [
+                Text(
+                    "Wallpapers",
+                  style: TextStyle(
+                    fontSize: 40,
+                    color: Colors.black,
+                    fontWeight: FontWeight.w500
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
     );
   }
 }
