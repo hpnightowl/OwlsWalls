@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:owlswall/wallpaper_preview.dart';
 
 class CustomCard extends StatelessWidget {
   static double getrandomesizes(){
@@ -14,17 +15,21 @@ class CustomCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AspectRatio(
-      aspectRatio:1/owl,
-      child:
-      Container(
-        decoration: BoxDecoration(
-            image: DecorationImage(
-              fit: BoxFit.cover,
-                image: AssetImage(this.image)
-            ),
-            color: Colors.black,
-            borderRadius: BorderRadius.circular(8)
+    return GestureDetector(
+      onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context)=> WallpaperPreview(image: this.image,))),
+      child: AspectRatio(
+        aspectRatio:1/owl,
+        child:
+        Container(
+          margin: EdgeInsets.only(bottom: 10),
+          decoration: BoxDecoration(
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                  image: AssetImage(this.image)
+              ),
+              color: Colors.black,
+              borderRadius: BorderRadius.circular(8)
+          ),
         ),
       ),
     );
