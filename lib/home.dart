@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:owlswall/card.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -27,16 +28,7 @@ class HomePage extends StatelessWidget {
                    Expanded(
                        child: Column(
                          children: [
-                           AspectRatio(
-                             aspectRatio:2/3,
-                             child:
-                             Container(
-                               decoration: BoxDecoration(
-                                   color: Colors.black,
-                                   borderRadius: BorderRadius.circular(8)
-                               ),
-                             ),
-                           )
+                           CustomCard()
                          ],
                        )
                    ),
@@ -44,16 +36,6 @@ class HomePage extends StatelessWidget {
                    Expanded(
                        child: Column(
                          children: [
-                           AspectRatio(
-                             aspectRatio: 0.8,
-                             child:
-                             Container(
-                               decoration: BoxDecoration(
-                                   color: Colors.black,
-                                   borderRadius: BorderRadius.circular(8)
-                               ),
-                             ),
-                           )
                          ],
                        )
                    ),
